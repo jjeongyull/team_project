@@ -1,0 +1,130 @@
+.nav-bar {
+    background-color: rgb(255, 255, 255) !important;
+  }
+  
+  .nav-item {
+    /* text-decoration:none;
+      color:black; */
+    margin-right: 15px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .btn-search {
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    padding-right: 50px;
+  }
+  
+  .img-style {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-icon {
+    /* position: relative;
+      right: 50px; */
+    color: #9aa0a6;
+  }
+  
+  /* footer */
+  footer {
+    display: flex;
+    justify-content: center;
+    height: 530px;
+    background-color: #f3e5f5;
+    padding-top: 25px;
+  }
+  
+  .footer-container {
+    max-width: 1170px;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  
+  .footer-menu {
+    display: flex;
+    justify-content: space-between;
+    height: 346px;
+  }
+  
+  .first-box {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .second-box {
+    width: 70%;
+    /* display: flex;
+  justify-content: flex-end; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-item {
+    padding: 0 20px;
+    /* text-align: center; */
+    margin: 20px 0px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0px;
+  }
+  
+  .footer-column {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* padding: 0 15px; */
+  }
+  
+  .pl-1 {
+    padding-left: 0.5rem;
+  }
+  
+  .pl-2 {
+    color: #616161;
+    font-weight: 200%;
+  }
+  
+  .footer-item {
+    padding: 0 20px;
+    text-align: center;
+    margin: 20px 0px;
+  }
+  
+  .btn-color {
+    background-color: #b39ddb;
+    color: #4527ad;
+    border: none;
+  }
+  
+  .second-box {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .icon-box {
+    width: 54px;
+    height: 54px;
+    border: 1px solid #222322;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
