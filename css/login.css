@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+}
+.border{
+  border: 1px solid #000;
+}
+.login-box{
+  border: 1px solid #e0e0e0;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input{
+  border: 1px solid #e4e4e4;
+  padding: 10px;
+  transition: .3s;
+  border-radius: 3px;
+}
+.input:focus{
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.login-btn{
+  background: rgb(116,54,140);
+  background: linear-gradient(40deg, rgb(79, 3, 109) 0%, rgb(113, 43, 148) 35%, rgba(183, 0, 255, 0.486) 100%);
+  color: #fff;
+}
+.sign-btn{
+  background-color: #e0e0e0;
+}
+.border-top{
+  border-top: 1px solid #d8d8d8;
+}
+.login-a{
+  color: #912bf0;
+  font-weight: bold;
+  text-decoration: underline;
+}
