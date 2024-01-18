@@ -25,9 +25,26 @@
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <!-- datatable -->
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+  <!-- supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- script -->
+  <script src="js/const.js"></script>
+  <script src="js/ck_event.js"></script>
+  <script src="js/draw.js"></script>
 </head>
 
 <body>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="modal_body">
+        
+      </div>
+    </div>
+  </div>
   <div class="px-4 py-3 bg-gray-50 flex justify-between sm:px-6">
     <h2 class="text-4xl font-extrabold tracking-tight h3">
       Contact 2VENTY
@@ -42,16 +59,13 @@
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="py-1 align-middle inline-block min-w-full sm:px-6 lg:px-8">
         <div class="overflow-hidden">
-          <table class="min-w-full divide-y">
+          <table class="min-w-full divide-y" id="contact_table">
             <thead class="border-b">
               <tr>
                 <th scope="col" class="pl-6 py-3 text-left text-xs uppercase tracking-wider">
                   No.
                 </th>
                 <th scope="col" class="px-10 py-3 text-center text-xs uppercase tracking-wider">
-                  Title
-                </th>
-                <th scope="col" class="px-3 py-3 text-center text-xs uppercase tracking-wider">
                   Name
                 </th>
                 <th scope="col" class="px-2 py-3 text-center text-xs uppercase tracking-wider">
@@ -60,12 +74,7 @@
               </tr>
             </thead>
             <tbody class="bg-white divide-y" id="rows">
-              <tr>
-              <td class="pl-6 py-3 text-left text-xs uppercase tracking-wider">1</td>
-              <td class="px-10 py-3 text-center text-xs uppercase tracking-wider">문의드립니다.</td>
-              <td class="px-3 py-3 text-center text-xs uppercase tracking-wider">강다혜</td>
-              <td class="px-2 py-3 text-center text-xs uppercase tracking-wider">2024-01-18</td>
-            </tr>
+              
             </tbody>
           </table>
         </div>
@@ -99,10 +108,12 @@
   </div>
 
   <footer id="footer"></footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script>
     $(function () {
-      $('#footer').load('component/footer.html', () => {})
+      $('#footer').load('component/footer.html', () => {});
+
+      draw_contact_table();
     });
   </script>
 </body>

@@ -148,7 +148,7 @@ main {
 }
 
 
-.qna-btn[type=submit] {
+.qna-btn {
   background: rgb(116, 54, 140);
   background: linear-gradient(40deg, rgb(79, 3, 109) 0%, rgb(113, 43, 148) 35%, rgba(183, 0, 255, 0.486) 100%);
   color: #fff;
