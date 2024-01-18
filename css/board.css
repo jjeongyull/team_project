@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+
+  --color-white: #FFF;
+  --color-black: #000;
+  --color-font: #1D1D1D;
+  --color-hover: #74368C;
+  --color-light-gray: #E0E0E0;
+  --color-focus: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  color: var(--color-font);
+  font-family: "Pretendard Variable", Pretendard, 'Roboto', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.h3 {
+  text-align: center;
+  font-weight: 900;
+  color: var(--color-hover);
+  cursor: default;
+}
+
+.border-b{
+  border-bottom: 2px solid var(--color-light-gray);
+}
+
+.allpost-btn {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.arrow {
+  color: var(--color-font);
+  cursor: pointer;
+}
+
+.qna-btn {
+  background: rgb(116, 54, 140);
+  background: linear-gradient(40deg, rgb(79, 3, 109) 0%, rgb(113, 43, 148) 35%, rgba(183, 0, 255, 0.486) 100%);
+  color: #fff;
+  cursor: pointer;
+}

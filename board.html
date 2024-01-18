@@ -5,20 +5,97 @@
   <meta charset="UTF-8">
   <title>Contact @2VENTY</title>
 
+  <!-- font -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- tailwindcss -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <!-- CSS -->
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/board.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/2c827c8cca.js" crossorigin="anonymous"></script>
+  <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-  <h1>Form 데이터 수신 페이지</h1>
+  <div class="px-4 py-3 bg-gray-50 flex justify-between sm:px-6">
+    <h2 class="text-4xl font-extrabold tracking-tight h3">
+      Contact 2VENTY
+    </h2>
+    <div id="nav-bar-info" class="flex">
+      <a href="#" class="inline-flex justify-center text-sm py-3 px-3 qna-btn">
+        문의하기
+      </a>
+    </div>
+  </div>
+  <div class="flex flex-col">
+    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="py-1 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full divide-y">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="pl-6 py-3 text-left text-xs uppercase tracking-wider">
+                  No.
+                </th>
+                <th scope="col" class="px-10 py-3 text-center text-xs uppercase tracking-wider">
+                  Title
+                </th>
+                <th scope="col" class="px-3 py-3 text-center text-xs uppercase tracking-wider">
+                  Name
+                </th>
+                <th scope="col" class="px-2 py-3 text-center text-xs uppercase tracking-wider">
+                  Date
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y" id="rows">
+              <td class="pl-6 py-3 text-left text-xs uppercase tracking-wider">1</td>
+              <td class="pl-6 px-10 text-left text-xs uppercase tracking-wider">문의드립니다.</td>
+              <td class="pl-6 px-3 text-center text-xs uppercase tracking-wider">강다혜</td>
+              <td class="px-2 py-3 text-center text-xs uppercase tracking-wider">2024-01-18</td>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-50 px-4 py-3 flex items-center justify-center border-t sm:px-6 dark:text-gray-400 ">
+    <div class="sm:flex-1 sm:flex sm:items-center sm:justify-between">
+      <a class="inline-flex items-center py-3 px-3 text-sm ml-2 allpost-btn">
+        모든 글 보기
+      </a>
+      <div>
+        <div class="relative z-0 inline-flex justify-between -space-x-px">
+          <a class="inline-flex items-center py-2 px-4 mr-3 text-sm arrow l-arrow">
+            <svg class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+          <a class="inline-flex items-center py-2 px-4 text-sm arrow r-arrow">
+            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  
   <footer id="footer"></footer>
 
   <script>

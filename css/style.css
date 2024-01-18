@@ -12,6 +12,7 @@
   font-family: "Pretendard Variable", Pretendard, 'Roboto', sans-serif;
 }
 
+/* 스크롤바 */
 body::-webkit-scrollbar {
   width: 10px;
 }
@@ -27,11 +28,11 @@ body::-webkit-scrollbar-track {
   box-shadow: inset 0px 0px 5px white;
 }
 
+/* HEADER */
+
 .nav-bar {
   background-color: rgb(255, 255, 255) !important;
 }
-
-
 
 .nav-item {
   /* text-decoration:none;
