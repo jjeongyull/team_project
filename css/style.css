@@ -131,21 +131,23 @@ main {
 }
 
 /* Section-Slide */
-.slide{
-  width : 40%;
+.slide {
+  width: 40%;
   margin: 0 auto;
 }
 
-.carousel-caption{
-  size:1rem;
+.carousel-caption {
+  size: 1rem;
   display: block;
   margin-left: -15%;
-  margin-right:-15%;
-  color: black; opacity:none;
-  background-color: white;opacity:0.8;
+  margin-right: -15%;
+  color: black;
+  opacity: none;
+  background-color: white;
+  opacity: 0.8;
 }
 
-.event-text{
+.event-text {
   color: #74368C;
   text-align: center;
   font-size: 30px;
@@ -155,17 +157,17 @@ main {
   font-weight: 700;
 }
 
-.slide_title{
-  font-weight:bold;
+.slide_title {
+  font-weight: bold;
   font-family: "Pretendard Variable", Pretendard, 'Roboto', sans-serif;
 }
 
-.slide_text{
+.slide_text {
   font-size: 13px;
   font-family: "Pretendard Variable", Pretendard, 'Roboto', sans-serif;
 }
 
-.first-line{
+.first-line {
   border-bottom: 1px solid #74368C;
 }
 
