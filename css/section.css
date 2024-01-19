@@ -1,0 +1,21 @@
+section{
+    width : 30%;
+    margin: 0 auto;
+}
+
+.carousel-caption{
+    size:1rem;
+    display: block;
+    margin-left: -15%;
+    margin-right:-15%;
+    color: black; opacity:none;
+    background-color: white;opacity:0.8;
+}
+
+.event-text{
+    color: #74368C;
+}
+
+h5{
+    font-weight:900;
+}
