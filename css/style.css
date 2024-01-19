@@ -29,45 +29,43 @@ body::-webkit-scrollbar-track {
 }
 
 /* HEADER */
-
 header .nav-bar {
-    background-color: rgb(255, 255, 255) !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 
-header .logo{
-    width: 130px;
+header .logo {
+  width: 130px;
 }
 
-header .nav-menu{
-    width: 100%;
-    justify-content: center;
+header .nav-menu {
+  width: 100%;
+  justify-content: center;
 }
 
 header .dropdown-style {
-    text-align: center;
+  text-align: center;
 }
 
-header .search-input{
-    border: 1px solid #b39ddb;
-    /* border-radius: 50px; */
+header .search-input {
+  border: 1px solid #b39ddb;
+  /* border-radius: 50px; */
 }
 
-
-header .btn-outline{
-    color: black;
-    border-color: #b39ddb;
+header .btn-outline {
+  color: black;
+  border-color: #b39ddb;
 }
 
-header .btn-outline:hover{
-/* background: rgb(116, 54, 140); */
-background: linear-gradient(40deg, rgb(79, 3, 109) 0%, rgb(113, 43, 148) 35%, rgba(183, 0, 255, 0.486) 100%);
-color: #fff;
+header .btn-outline:hover {
+  /* background: rgb(116, 54, 140); */
+  background: linear-gradient(40deg, rgb(79, 3, 109) 0%, rgb(113, 43, 148) 35%, rgba(183, 0, 255, 0.486) 100%);
+  color: #fff;
 }
 
 
 header .custom-tooltip {
---bs-tooltip-bg: var(#4527ad);
---bs-tooltip-color: var(white);
+  --bs-tooltip-bg: var(#4527ad);
+  --bs-tooltip-color: var(white);
 }
 
 .swiper-container {
@@ -152,7 +150,7 @@ main {
 
 
 .qna-btn,
-.qna-btn:hover  {
+.qna-btn:hover {
   background: rgb(116, 54, 140);
   background: linear-gradient(40deg, rgb(79, 3, 109) 0%, rgb(113, 43, 148) 35%, rgba(183, 0, 255, 0.486) 100%);
   color: #fff;
@@ -169,19 +167,19 @@ main {
 
 /* footer */
 footer {
-    background-color: #F8FAFB;
+  background-color: #F8FAFB;
 }
 
-footer .sort-style{
-    text-align: center;
+footer .sort-style {
+  text-align: center;
 }
 
-footer .btn-style{
-    background-color: transparent;
-    border:none;
-    color:black;
+footer .btn-style {
+  background-color: transparent;
+  border: none;
+  color: black;
 }
 
-footer .copyright{
-    text-align: center;
+footer .copyright {
+  text-align: center;
 }
