@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <!-- tailwindcss -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
@@ -49,7 +49,7 @@
     <nav class="navbar nav-bar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img class="logo" src="image/image.png" alt="2venty">
+          <img class="logo" src="image/image.png" alt="2venty_logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -63,7 +63,7 @@
               <a class="nav-link" href="#">Event</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact 2VENTY</a>
+              <a class="nav-link" href="./board.html">Contact 2VENTY</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -96,30 +96,47 @@
   <main>
 
     <section id="board">
-        <div class="w-full h-screen px-5 md:px-0 center">
-          <div class="w-full border-box sm:w-1/2 lg:w-1/3 p-3 md:p-10">
-            <div class="mt-3 mb-4 h3">CONTACT @2VENTY</div>
-            <div class="flex items-center mb-2">
-              <label class="label w-1/5 text-sm" for="contact_name">이름</label>
-              <input class="input w-4/5 text-sm" id="contact_name" type="text" placeholder="2VENTY">
-            </div>
-            <div class="flex items-center mb-2">
-              <label class="label w-1/5 text-sm" for="contact_pw">비밀번호</label>
-              <input class="input w-4/5 text-sm" type="password" id="contact_pw" placeholder="비밀번호를 입력하세요.">
-            </div>
-            <div class="flex items-center mb-4 md:mb-20">
-              <label class="label w-1/5 text-sm" for="contact_phone">연락처</label>
-              <input class="input w-4/5 text-sm" type="text" id="contact_phone" maxlength="13" placeholder="010-0000-0000">
-            </div>
-            <div class="mb-5 md:mb-20">
-              <label class="mb-2 label block w-1/5 text-sm" for="contact_info">문의 내용</label>
-              <textarea class="w-full text-sm textarea" id="contact_info" rows="3" placeholder="문의 내용을 입력하세요."></textarea>
-            </div>
-            <div class="gap-5 mb-5">
-              <button class="qna-btn w-full py-4 md:py-5 text-sm md:text-base" id="btn_contact">문의하기</button>
-            </div>
+      <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h3 class="display-4 fw-bold lh-3 text-body-emphasis mb-3">CONTACT <sapn class="h3">@2VENTY</sapn>
+            </h3>
+            <p class="col-lg-10 fs-10">
+              혹시, 2VENTY와 함께하고 싶으신가요? </p>
+            <p class="col-lg-10 fs-10 mt-1">
+              다양한 아이디어 또는 도움이 필요하신 경우라면</p>
+            <p class="col-lg-10 fs-10 mt-1">
+              언제든지 문의 남겨주세요! 소중한 의견을 기다리고 있겠습니다!
+            </p>
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5 mt-3">
+            <form class="p-4 p-md-5 border bg-body-tertiary">
+              <div class="mb-3">
+                <!-- <label class="pb-2" for="contact_name">이름</label> -->
+                <input type="text" class="input form-control" id="contact_name" placeholder="이름">
+              </div>
+              <div class="mb-3">
+                <!-- <label class="pb-2" for="contact_pw">비밀번호</label> -->
+                <input type="password" class="input form-control" id="contact_pw" placeholder="비밀번호">
+              </div>
+              <div class="mb-3">
+                <!-- <label class="pb-2" for="contact_phone">연락처</label> -->
+                <input type="text" class="input form-control" id="contact_phone" maxlength="13" placeholder="010-0000-0000">
+              </div>
+              <div class="mb-3">
+                <!-- <label class="pb-2" for="contact_info">문의 내용</label> -->
+                <textarea type="email" class="textarea form-control" id="contact_info" placeholder="문의 내용"></textarea>
+              </div>
+              <!-- <div class="checkbox mb-3">
+                <label>
+                  <input class="checkbox" type="checkbox" value="agree"> <a href="#">개인정보 수집 동의</a>
+                </label> 
+              </div> -->
+              <button class="qna-btn w-100 btn btn-lg mb-md" type="submit" id="btn_contact">문의하기</button>
+            </form>
           </div>
         </div>
+      </div>
     </section>
 
   </main>
@@ -127,10 +144,10 @@
   <!-- footer -->
   <footer class="pb-5">
     <div class="container">
-      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-2 border-top sort-style">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-2 border-top sort-style">
         <div class="col mb-3 sort-style">
-          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-            <a href="#"><img src="image/image.png" width="132"/></a>
+          <a href="#" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="image/image.png" width="132" alt="2venty_logo"/>
           </a>
           <p class="text-muted">© 2023</p>
           <div class="col dropdown">
@@ -179,7 +196,7 @@
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><i class="fa-brands fa-youtube"></i></a></li>
           </ul>
         </div>
-      </footer>
+      </div>
       <div class="copyright"> Copyright ⓒ 2venty Co.,Ltd. All Rights Reserved.</div>
     </div>
     
