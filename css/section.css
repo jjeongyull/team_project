@@ -1,5 +1,5 @@
-section{
-    width : 30%;
+.slide{
+    width : 40%;
     margin: 0 auto;
 }
 
@@ -14,8 +14,24 @@ section{
 
 .event-text{
     color: #74368C;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Bagel Fat One', system-ui;
+    font-family: 'Moirai One', system-ui;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }
 
-h5{
-    font-weight:900;
+.slide_title{
+    font-weight:bold;
+    font-family: "Pretendard Variable", Pretendard, 'Roboto', sans-serif;
+}
+
+.slide_text{
+    font-size: 13px;
+    font-family: "Pretendard Variable", Pretendard, 'Roboto', sans-serif;
+}
+
+.first-line{
+    border-bottom: 1px solid #74368C;
 }
