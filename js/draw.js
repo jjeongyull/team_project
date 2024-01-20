@@ -17,3 +17,17 @@ async function draw_contact_table(){
 	
   new DataTable('#contact_table');
 }
+
+// 서브페이지 그리기
+function draw_sub_page(idx){
+  let tempJSON = data_json.filter((items) => {
+    return Number(items.idx) === Number(idx);
+  });
+
+  tempJSON = tempJSON[0];
+
+  let img = `<img class="sub-img" src=${tempJSON.img} alt="">`;
+  $('#sub_img').html(img);
+  $('#sub_h2').text(tempJSON.title);
+  $('#sub_p').text(tempJSON.info);
+}

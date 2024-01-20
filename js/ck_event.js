@@ -58,15 +58,28 @@ $(document).on('input', '#contact_phone' ,function() {
 
 // 게시판 클릭 시 상세보기
 $(document).on('click', '.btn_contact_view', function(){
+  var loginCookie = document.cookie.replace(/(?:(?:^|.*;\s*)login\s*\=\s*([^;]*).*$)|^.*$/, "$1");
   let id = $(this).data('id');
   let pw = g_contact_list.filter((items) => {
     return Number(items.id) === Number(id);
   });
   pw = pw[0].contact_pw;
-  $('#modal_body').html(passwrod_modal);
-
-  $('#pw').val(pw);
-  $('#idx').val(id);
+  if (loginCookie === "true") {
+    let contact = g_contact_list.filter((items) => {
+      return Number(items.id) === Number(id);
+    });
+    contact = contact[0];
+    $('#modal_body').empty();
+    $('#modal_body').html(contact_modal);
+    $('#name').text(contact.contact_name);
+    $('#phone').text(contact.contact_phone);
+    $('#info').text(contact.contact_info);
+    $('#idx').val(id);
+  }else{
+    $('#modal_body').html(passwrod_modal);
+    $('#pw').val(pw);
+    $('#idx').val(id);
+  }
 });
 
 // 게시판 비밀번호 체크
@@ -88,5 +101,74 @@ $(document).on('click', '#btn_pw_check', function(){
     $('#name').text(contact.contact_name);
     $('#phone').text(contact.contact_phone);
     $('#info').text(contact.contact_info);
+    $('#btn_board_del').css('display', 'inline-block')
   }
 });
+
+// 로그인버튼 클릭 시
+$(document).on('click', '#btn_login', async function(){
+  let admin_id = $('#user_id').val();
+  let admin_pw = $('#user_pw').val();
+
+  let { data: record, error } = await client.from('member').select('*');
+  let admin = record[0];
+
+  if(admin_id != admin.admin_id){
+    alert('아이디가 맞지않습니다.');
+    return;
+  }
+  if(admin_pw != admin.admin_pw){
+    alert('비밀번호가 맞지않습니다.');
+    return;
+  }
+
+  setCookie("login", "true", 1);
+  alert('로그인이 완료되었습니다');
+  window.location.href = 'index.html';
+});
+
+// 게시판 삭제
+$(document).on('click', '#btn_board_del', async function(){
+  let id = $('#idx').val();
+  const { error } = await client
+  .from('pages')
+  .delete()
+  .eq('id', id);
+
+  if(!error){
+    alert('고객문의가 삭제되었습니다.');
+    draw_contact_table();
+    $('[data-bs-dismiss="modal"]').trigger('click');
+  }else{
+    alert('삭제도중 에러가 발생하였습니다.');
+    return;
+  }
+});
+
+// 로그아웃버튼 클릭 시
+$(document).on('click', '#btn_logout', async function(){
+  deleteCookie("login");
+  window.location.href = 'index.html';
+});
+
+// 서브페이지 이동
+$(document).on('click', '.btn_go_sub', function(){
+  let idx = $(this).data('idx');
+  window.location.href = `sub.html?idx=${idx}`;
+});
+
+// 쿠키 설정 함수
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+// 쿠키 삭제 함수
+function deleteCookie(name) {
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
