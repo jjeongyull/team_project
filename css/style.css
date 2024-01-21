@@ -441,75 +441,11 @@ main {
 
 
 /* footer */
+
 footer {
-  background-color: #F8FAFB;
+  color: var(--color-font);
 }
 
-footer .sort-style {
-  text-align: center;
-}
-
-footer .btn-style {
-  background-color: transparent;
-  border: none;
-  color: black;
-}
-
-footer .copyright {
-  text-align: center;
-}
-
-/* sub */
-.sub-box {
-  border: 1px solid #dbdbdb;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.sub-box-1 {
-  width: 50%;
-}
-
-.sub-img {
-  display: block;
-  width: 100%;
-}
-
-.sub-h2 {
-  font-size: 40px;
-  color: #74368C;
-  font-weight: bold;
-  margin-bottom: 40px;
-  word-break: keep-all;
-}
-
-.sup-p {
-  color: #333;
-  font-size: 25px;
-  line-height: 30px;
-  word-break: keep-all;
-}
-
-@media (max-width: 860px) {
-  .sub-box {
-    display: block;
-  }
-
-  .sub-box-1 {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .sub-h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  .sup-p {
-
-    font-size: 16px;
-    line-height: 23px;
-  }
+.nav-link{
+  color: var(--color-font);
 }
